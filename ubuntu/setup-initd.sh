@@ -63,6 +63,7 @@ do
 	sudo /etc/init.d/${FNAME} stop
     fi
 
+    sudo update-rc.d ${FNAME} defaults
     sudo /etc/init.d/${FNAME} start
 done
 
