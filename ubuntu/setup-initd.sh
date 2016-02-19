@@ -30,7 +30,7 @@ do
 
     ${PERL} -p -i -e "s!__IPLOOKUP_USER__!www-data!g" ${INITD_SCRIPT}
     ${PERL} -p -i -e "s!__IPLOOKUP_DAEMON__!${SERVICES}/iplookup/wof-iplookup-server!g" ${INITD_SCRIPT}
-    ${PERL} -p -i -e "s!__IPLOOKUP_ARGS__!!g" ${INITD_SCRIPT}
+    ${PERL} -p -i -e "s!__IPLOOKUP_ARGS__!-cors!g" ${INITD_SCRIPT}
     
 done
 
