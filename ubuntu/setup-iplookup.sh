@@ -22,4 +22,6 @@ make build
 
 cd - 
 
-cp /usr/local/mapzen/go-whosonfirst-iplookup/bin/wof-iplookup-server ${SERVICES}/iplookup-server/wof-iplookup-server
+cp /usr/local/mapzen/go-whosonfirst-iplookup/bin/wof-iplookup-server ${SERVICES}/iplookup/wof-iplookup-server
+
+exit 0
