@@ -15,16 +15,17 @@
 IPLOOKUP_DB=__IPLOOKUP_DB__
 IPLOOKUP_USER=__IPLOOKUP_USER__
 IPLOOKUP_DAEMON=__IPLOOKUP_DAEMON__
+IPLOOKUP_HOST="__IPLOOKUP_HOST__"
 IPLOOKUP_PORT=__IPLOOKUP_PORT__
 
 IPLOOKUP_ARGS="__IPLOOKUP_ARGS__"
 
 # Okay - you shouldn't need to edit anything after this
 
-IPLOOKUP_ARGS="-db ${IPLOOKUP_DB} -port ${IPLOOKUP_PORT} -source maxmind ${IPLOOKUP_ARGS}"
+IPLOOKUP_ARGS="-db ${IPLOOKUP_DB} -host ${IPLOOKUP_HOST} -port ${IPLOOKUP_PORT} -source maxmind ${IPLOOKUP_ARGS}"
 
 PID_PATH=/var/run/
-PID_NAME=`basename ${IPLOOKUP_DAEMON}`
+PID_NAME=`basename ${IPLOOKUP_DAEMON}-maxmind`
 PID_FILE=${PID_PATH}${PID_NAME}.pid
 
 if [ "$(id -u)" != "0" ]; then

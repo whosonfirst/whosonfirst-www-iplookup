@@ -39,6 +39,9 @@ done
 ${PERL} -p -i -e "s!__IPLOOKUP_DB__!${MMDB}/whosonfirst-city-latest.mmdb!g" ${INITD_WOF}
 ${PERL} -p -i -e "s!__IPLOOKUP_PORT__!4884!g" ${INITD_WOF}
 
+# HOST=`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+# ${PERL} -p -i -e "s!__IPLOOKUP_HOST__!localhost!g" ${INITD_WOF}
+
 # maxmind configs
 
 ${PERL} -p -i -e "s!__IPLOOKUP_DB__!${MMDB}/whosonfirst-maxmind-city-latest.mmdb!g" ${INITD_MAXMIND}
